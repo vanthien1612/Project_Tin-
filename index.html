@@ -17,8 +17,8 @@
             <source src="nhac-tet.mp3" type="audio/mpeg">
         </audio>
     </div>
-    <!-- Hàm bật/tắt nhạc Tết -->  
-    <script>  
+    <!-- Hàm bật/tắt nhạc Tết -->
+    <script>
         function toggleMusic() {
             const audio = document.getElementById('tet-song');
             const icon = document.getElementById('music-icon');
@@ -142,7 +142,7 @@
             <p>@Copyright by Van Thien | 2026</p>
         </div>
     </footer>
-<!-- Tạo hiệu ứng hoa mai, hoa đào rơi -->
+    <!-- Tạo hiệu ứng hoa mai, hoa đào rơi -->
     <div id="tet-container"
         style="position: fixed; top: 0; left: 0; pointer-events: none; width: 100%; height: 100%; z-index: 9999;"></div>
 
@@ -170,6 +170,28 @@
             setTimeout(() => flower.remove(), 5000);
         }
         setInterval(createFlower, 300);
+    </script>
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert("Xin lỗi, chức năng này bị khóa để bảo vệ bản quyền!");
+        });
+    </script>
+    <script>
+        document.onkeydown = function (e) {
+            // Chặn F12
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Chặn Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0))) {
+                return false;
+            }
+            // Chặn Ctrl+U (Xem nguồn trang)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
     </script>
 </body>
 
