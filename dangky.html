@@ -1,0 +1,214 @@
+<html lang="vi">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Project of Thien </title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+        <div id="music-control" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000;">
+                <button onclick="toggleMusic()"
+                        style="background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                        <span id="music-icon">🎵</span>
+                </button>
+                <audio id="tet-song" loop>
+                        <source src="nhac-tet.mp3" type="audio/mpeg">
+                </audio>
+        </div>
+
+        <script>
+                function toggleMusic() {
+                        const audio = document.getElementById('tet-song');
+                        const icon = document.getElementById('music-icon');
+                        audio.volume = 0.4;
+                        if (audio.paused) {
+                                audio.play();
+                                icon.innerText = '⏸️';
+                        } else {
+                                audio.pause();
+                                icon.innerText = '🎵';
+                        }
+                }
+        </script>
+        <header>
+                <div class="banner">
+                        <h1>Câu Lạc Bộ Ngoại Khóa Trường THPT Trần Văn Dư</h1>
+                </div>
+                <div class="slogan">
+                        <div class="row">
+                                <div class="block_3">
+                                        <h2>Khơi nguồn Năng động</h2>
+                                        <p> Lan tỏa năng lượng tích cực đến mọi người xung quanh.</p>
+                                </div>
+                                <div class="block_3">
+                                        <h2>Cháy bỏng Đam mê</h2>
+                                        <p> Giữ vững ý chí kiên cường trước mọi thử thách gian nan.</p>
+                                </div>
+                                <div class="block_3">
+                                        <h2>Tự tin Tỏa sáng</h2>
+                                        <p> Khẳng định bản sắc riêng trên hành trình chinh phục đỉnh cao. </p>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <h1 style="text-align: center; margin-top: 20px;">
+                ĐĂNG KÍ THÀNH VIÊN CLB THỂ THAO
+        </h1>
+
+        <fieldset
+                style="width: 50%; margin: auto; margin-top: 30px; margin-bottom: 30px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <form>
+
+                        <table>
+                                <tr>
+                                        <td><label for="hoten">Họ tên:</label></td>
+                                        <td><input id="hoten" type="text" required></td>
+                                </tr>
+
+                                <tr>
+                                        <td><label for="matkhau">Mật khẩu:</label></td>
+                                        <td><input id="matkhau" type="password" required></td>
+                                </tr>
+
+                                <tr>
+                                        <td><label for="ngaysinh">Ngày sinh:</label></td>
+                                        <td><input id="ngaysinh" type="date" required></td>
+                                </tr>
+                                <tr>
+                                        <td><label for="so">Số điện thoại:</label></td>
+                                        <td><input id="so" type="text" required></td>
+                                </tr>
+                                <tr>
+                                        <td><label for="diachi">Địa chỉ:</label></td>
+                                        <td><textarea id="diachi" rows="4" cols="30" required></textarea></td>
+                                </tr>
+
+                                <tr>
+                                        <td>Giới tính:</td>
+                                        <td>
+                                                <input type="radio" id="nam" name="gioitinh" value="Nam" required>
+                                                <label for="nam">Nam</label><br>
+
+                                                <input type="radio" id="nu" name="gioitinh" value="Nữ" required>
+                                                <label for="nu">Nữ</label>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td>Sở thích:</td>
+                                        <td>
+                                                <input type="checkbox" id="covua" value="Cờ vua">
+                                                <label for="covua">Cờ vua</label><br>
+
+                                                <input type="checkbox" id="game" value="Trò chơi điện tử">
+                                                <label for="game">Trò chơi điện tử</label><br>
+
+                                                <input type="checkbox" id="dulich" value="Du lịch">
+                                                <label for="dulich">Du lịch</label><br>
+
+                                                <input type="checkbox" id="camhoa" value="Cắm hoa">
+                                                <label for="camhoa">Cắm hoa</label><br>
+
+                                                <input type="checkbox" id="nauan" value="Nấu ăn">
+                                                <label for="nauan">Nấu ăn</label>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td><label for="choosefile">Hồ sơ đính kèm:</label></td>
+                                        <td><input type="file" id="choosefile"></td>
+                                </tr>
+
+                                <tr>
+                                        <td><label for="monclb">Đăng kí CLB:</label></td>
+                                        <td>
+                                                <select id="monclb" required>
+                                                        <option>Bóng đá</option>
+                                                        <option>Cờ vua</option>
+                                                        <option>Cầu lông</option>
+                                                        <option>Điền kinh</option>
+                                                        <option>Thể dục dụng cụ</option>
+                                                        <option>Bơi lội</option>
+                                                        <option>Bóng chuyền</option>
+                                                        <option>Âm nhạc</option>
+                                                        <option>Nhiếp ảnh</option>
+                                                        <option>Khiêu vũ</option>
+                                                        <option>Mĩ thuật</option>
+                                                </select>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td></td>
+                                        <td><input type="submit" value="Đăng ký"></td>
+                                </tr>
+                        </table>
+
+                </form>
+        </fieldset>
+        <footer>
+                <div class="row">
+                        <div class="block_3">
+                                <h3>📍 Liên hệ</h3>
+                                <ul>
+                                        <li>Địa chỉ: Trường THPT Trần Văn Dư, xã Tây Hồ, TP Đà Nẵng</li>
+                                        <li>SĐT: 0338401283</li>
+                                        <li>Email: nguoidung@gmail.com</li>
+                                        <li>Website: <a href="index.html" class="link" style="text-indent: 5px;">CLB
+                                                        Ngoại Khóa</a></li>
+                                </ul>
+                        </div>
+
+                        <div class="block_3">
+                                <h3>🧧 Lời chúc</h3>
+                                <p>Chúc mừng năm mới 2026! An khang thịnh vượng, vạn sự như ý.</p>
+                                <h3 style="text-align: center;"> <a href="dangky.html" class="link" style=>Đăng kí</a>
+                                </h3>
+                        </div>
+
+                        <div class="block_3">
+                                <h3>🔗 Liên kết</h3>
+                                <ul>
+                                        <li><a href="thethao.html" class="link">CLB Thể Thao</a></li>
+                                        <li><a href="nghethuat.html" class="link">CLB Nghệ Thuật</a></li>
+
+                                </ul>
+                        </div>
+
+                        <p>@Copyright by Van Thien | 2026</p>
+                </div>
+        </footer>
+
+        <div id="tet-container"
+                style="position: fixed; top: 0; left: 0; pointer-events: none; width: 100%; height: 100%; z-index: 9999;">
+        </div>
+
+        <script>
+                function createFlower() {
+                        const flower = document.createElement('div');
+                        flower.innerHTML = '🌸'; // Hoặc '🌼' cho hoa mai
+                        flower.style.position = 'absolute';
+                        flower.style.left = Math.random() * 100 + 'vw';
+                        flower.style.animationDuration = Math.random() * 3 + 2 + 's';
+                        flower.style.opacity = Math.random();
+                        flower.style.fontSize = Math.random() * 10 + 10 + 'px';
+                        flower.style.top = '-20px';
+
+                        document.getElementById('tet-container').appendChild(flower);
+
+                        flower.animate([
+                                { transform: 'translateY(0) rotate(0deg)' },
+                                { transform: `translateY(100vh) rotate(${Math.random() * 360}deg)` }
+                        ], {
+                                duration: Math.random() * 3000 + 3000,
+                                iterations: 1
+                        });
+
+                        setTimeout(() => flower.remove(), 5000);
+                }
+                setInterval(createFlower, 300);
+        </script>
+</body>
+
+</html>

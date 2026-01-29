@@ -1,0 +1,165 @@
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project of Thien </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="music-control" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000;">
+        <button onclick="toggleMusic()"
+            style="background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+            <span id="music-icon">🎵</span>
+        </button>
+        <audio id="tet-song" loop>
+            <source src="nhac-tet.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            const audio = document.getElementById('tet-song');
+            const icon = document.getElementById('music-icon');
+            audio.volume = 0.4;
+            if (audio.paused) {
+                audio.play();
+                icon.innerText = '⏸️';
+            } else {
+                audio.pause();
+                icon.innerText = '🎵';
+            }
+        }
+    </script>
+    <header>
+        <div class="banner">
+            <h1>Câu Lạc Bộ Ngoại Khóa Trường THPT Trần Văn Dư</h1>
+        </div>
+        <div class="slogan">
+            <div class="row">
+                <div class="block_3">
+                    <h2>Khơi nguồn Năng động</h2>
+                    <p> Lan tỏa năng lượng tích cực đến mọi người xung quanh.</p>
+                </div>
+                <div class="block_3">
+                    <h2>Cháy bỏng Đam mê</h2>
+                    <p> Giữ vững ý chí kiên cường trước mọi thử thách gian nan.</p>
+                </div>
+                <div class="block_3">
+                    <h2>Tự tin Tỏa sáng</h2>
+                    <p> Khẳng định bản sắc riêng trên hành trình chinh phục đỉnh cao. </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="section">
+            <div class="text">
+                <h2>CLB Thể Thao</h2>
+                <ul>
+                    <li>Bóng đá</li>
+                    <li>Cờ vua</li>
+                    <li>Điền kinh</li>
+                    <li>Bơi lội</li>
+                    <li>Thể dục dụng cụ</li>
+                    <li>Bóng chuyền</li>
+                </ul>
+                <div class="text">
+                    <p> <strong>📅 Tổng quan thành lập</strong> <br>
+                        Được đặt nền móng từ định hướng phát triển thể chất bền vững, CLB đã xây dựng hệ thống đào tạo
+                        bài bản cho 6 bộ môn trọng điểm. Mục tiêu cốt lõi của CLB là tạo ra môi trường cọ xát chuyên
+                        nghiệp cho các vận động viên từ phong trào đến bán chuyên nghiệp, tập trung vào cả sức bền, sự
+                        dẻo dai và tư duy chiến thuật.</p>
+
+                    <p><strong>🎯 Mục tiêu phát triển</strong> <br>
+                    <ul>
+                        <li> <strong>Nhóm Thể lực (Điền kinh, Bơi lội):</strong> Với 4 huy chương Vàng điền kinh, đây là
+                            xương sống của CLB. Các vận động viên được đào tạo theo giáo án chuyên sâu về sức bền và bứt
+                            tốc.</li>
+                        <li><strong>Nhóm Kỹ thuật (Thể dục dụng cụ, Bóng chuyền):</strong> Dù Bóng chuyền đang trong
+                            giai đoạn trẻ hóa đội hình, Thể dục dụng cụ đã kịp mang về 2 huy chương Bạc, minh chứng cho
+                            sự tỉ mỉ và kỷ luật trong tập luyện. </li>
+                        <li><strong>Nhóm Tư duy (Cờ vua):</strong> 3 huy chương Vàng cho thấy CLB không chỉ chú trọng
+                            thể chất mà còn đầu tư mạnh mẽ vào năng lực trí tuệ, tạo nên sự cân bằng trong định hướng
+                            phát triển.</li>
+                        <li><strong>Nhóm Đồng đội (Bóng đá):</strong> Tấm huy chương Đồng môn bóng đá nam là kết quả của
+                            chiến thuật hợp lý và tinh thần đoàn kết, là nền tảng để CLB hướng tới những danh hiệu cao
+                            hơn trong mùa giải tới.</li>
+                    </ul>
+                    <br>
+                    <p><strong>Định hướng sắp tới:</strong> Tiếp tục duy trì vị thế ở môn Điền kinh và Cờ vua, đồng thời
+                        đầu tư chuyên sâu cho đội tuyển Bơi lội và Bóng chuyền để cải thiện thứ hạng trong các kỳ thi
+                        đấu tiếp theo.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="covua.jpg">
+                <br><br>
+                <img src="huy_chuong.jpg">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="block_3">
+                <h3>📍 Liên hệ</h3>
+                <ul>
+                    <li>Địa chỉ: Trường THPT Trần Văn Dư, xã Tây Hồ, TP Đà Nẵng</li>
+                    <li>SĐT: 0338401283</li>
+                    <li>Email: nguoidung@gmail.com</li>
+                    <li>Website: <a href="index.html" class="link" style="text-indent: 5px;">CLB Ngoại Khóa</a></li>
+                </ul>
+            </div>
+
+            <div class="block_3">
+                <h3>🧧 Lời chúc</h3>
+                <p>Chúc mừng năm mới 2026! An khang thịnh vượng, vạn sự như ý.</p>
+                <h3 style="text-align: center;"> <a href="dangky.html" class="link" style=>Đăng kí</a></h3>
+            </div>
+
+            <div class="block_3">
+                <h3>🔗 Liên kết</h3>
+                <ul>
+                    <li><a href="thethao.html" class="link">CLB Thể Thao</a></li>
+                    <li><a href="nghethuat.html" class="link">CLB Nghệ Thuật</a></li>
+
+                </ul>
+            </div>
+
+            <p>@Copyright by Van Thien | 2026</p>
+        </div>
+    </footer>
+
+    <div id="tet-container"
+        style="position: fixed; top: 0; left: 0; pointer-events: none; width: 100%; height: 100%; z-index: 9999;"></div>
+
+    <script>
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.innerHTML = '🌸'; // Hoặc '🌼' cho hoa mai
+            flower.style.position = 'absolute';
+            flower.style.left = Math.random() * 100 + 'vw';
+            flower.style.animationDuration = Math.random() * 3 + 2 + 's';
+            flower.style.opacity = Math.random();
+            flower.style.fontSize = Math.random() * 10 + 10 + 'px';
+            flower.style.top = '-20px';
+
+            document.getElementById('tet-container').appendChild(flower);
+
+            flower.animate([
+                { transform: 'translateY(0) rotate(0deg)' },
+                { transform: `translateY(100vh) rotate(${Math.random() * 360}deg)` }
+            ], {
+                duration: Math.random() * 3000 + 3000,
+                iterations: 1
+            });
+
+            setTimeout(() => flower.remove(), 5000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+</body>
+
+</html>

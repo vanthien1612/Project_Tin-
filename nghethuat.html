@@ -1,0 +1,168 @@
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project of Thien </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="music-control" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000;">
+        <button onclick="toggleMusic()"
+            style="background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+            <span id="music-icon">🎵</span>
+        </button>
+        <audio id="tet-song" loop>
+            <source src="nhac-tet.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            const audio = document.getElementById('tet-song');
+            const icon = document.getElementById('music-icon');
+            audio.volume = 0.4;
+            if (audio.paused) {
+                audio.play();
+                icon.innerText = '⏸️';
+            } else {
+                audio.pause();
+                icon.innerText = '🎵';
+            }
+        }
+    </script>
+    <header>
+        <div class="banner">
+            <h1>Câu Lạc Bộ Ngoại Khóa Trường THPT Trần Văn Dư</h1>
+        </div>
+        <div class="slogan">
+            <div class="row">
+                <div class="block_3">
+                    <h2>Khơi nguồn Năng động</h2>
+                    <p> Lan tỏa năng lượng tích cực đến mọi người xung quanh.</p>
+                </div>
+                <div class="block_3">
+                    <h2>Cháy bỏng Đam mê</h2>
+                    <p> Giữ vững ý chí kiên cường trước mọi thử thách gian nan.</p>
+                </div>
+                <div class="block_3">
+                    <h2>Tự tin Tỏa sáng</h2>
+                    <p> Khẳng định bản sắc riêng trên hành trình chinh phục đỉnh cao. </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+
+        <div class="section">
+            <div class="text">
+                <h2>CLB Nghệ Thuật</h2>
+                <ul>
+                    <li>Âm nhạc</li>
+                    <li>Mĩ thuật</li>
+                    <li>Nhiếp ảnh</li>
+                    <li>Khiêu vũ</li>
+                </ul>
+                <div class="text">
+                    <p><strong>📅 Giới thiệu chung</strong>
+                        Được thành lập song song với khối thể thao, CLB Nghệ thuật là không gian dành riêng cho những
+                        tâm
+                        hồn bay bổng và sáng tạo. CLB tập trung vào 4 lĩnh vực cốt lõi: Âm nhạc, Mỹ thuật, Nhiếp ảnh và
+                        Khiêu vũ. Với phương châm "Mỗi cá nhân là một nghệ sĩ", CLB đã trở thành điểm đến lý tưởng để
+                        các
+                        thành viên tự do thể hiện bản sắc riêng và tìm kiếm sự đồng điệu trong nghệ thuật.</p>
+                    <p><strong>✨ Đặc điểm nổi bật & Hoạt động tiêu biểu</strong></p>
+                    <ul>
+                        <li><strong>Mỹ thuật - "Linh hồn của CLB":</strong> Với thành tích Giải Nhì cấp Thành phố, đây
+                            là bộ môn có chiều sâu nhất. Các thành
+                            viên không chỉ vẽ trên toan truyền thống mà còn thử nghiệm các phong cách Digital Art và
+                            tranh cổ động.</li>
+
+                        <li><strong>Khiêu vũ - "Nhịp điệu rực cháy":</strong> Đội khiêu vũ luôn là tâm điểm của mọi sự
+                            kiện. Giải Khuyến khích vừa qua là động
+                            lực để đội ngũ biên đạo trẻ tiếp tục sáng tạo những bài nhảy bứt phá hơn.</li>
+
+                        <li><strong>Âm nhạc & Nhiếp ảnh:</strong> Tuy chưa có những giải thưởng chính thức lớn, nhưng
+                            đây lại là hai bộ môn đóng vai trò "giữ
+                            lửa" cho các hoạt động ngoại khóa, từ việc cung cấp tư liệu hình ảnh đến việc tạo không khí
+                            sôi động cho các buổi lễ
+                            kỷ niệm.</li>
+                    </ul>
+                    <p><strong>Định hướng sắp tới:</strong> Tiếp tục phát huy thế mạnh chủ lực ở môn Mỹ thuật để giữ
+                        vững vị thế tại các đấu trường cấp Thành phố, đồng thời đầu tư bài bản về kỹ thuật biểu diễn và
+                        biên đạo chuyên sâu cho đội Khiêu vũ, nhằm bứt phá thứ hạng và chinh phục những giải thưởng cao
+                        hơn trong các mùa giải nghệ thuật sắp tới.</p>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="ve.jpg">
+                <br><br>
+                <img src="khieuvu.jpg">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="block_3">
+                <h3>📍 Liên hệ</h3>
+                <ul>
+                    <li>Địa chỉ: Trường THPT Trần Văn Dư, xã Tây Hồ, TP Đà Nẵng</li>
+                    <li>SĐT: 0338401283</li>
+                    <li>Email: nguoidung@gmail.com</li>
+                    <li>Website: <a href="index.html" class="link" style="text-indent: 5px;">CLB Ngoại Khóa</a></li>
+                </ul>
+            </div>
+
+            <div class="block_3">
+                <h3>🧧 Lời chúc</h3>
+                <p>Chúc mừng năm mới 2026! An khang thịnh vượng, vạn sự như ý.</p>
+                <h3 style="text-align: center;"> <a href="dangky.html" class="link" style=>Đăng kí</a></h3>
+            </div>
+
+            <div class="block_3">
+                <h3>🔗 Liên kết</h3>
+                <ul>
+                    <li><a href="thethao.html" class="link">CLB Thể Thao</a></li>
+                    <li><a href="nghethuat.html" class="link">CLB Nghệ Thuật</a></li>
+
+                </ul>
+            </div>
+
+            <p>@Copyright by Van Thien | 2026</p>
+        </div>
+    </footer>
+
+    <div id="tet-container"
+        style="position: fixed; top: 0; left: 0; pointer-events: none; width: 100%; height: 100%; z-index: 9999;"></div>
+
+    <script>
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.innerHTML = '🌸'; // Hoặc '🌼' cho hoa mai
+            flower.style.position = 'absolute';
+            flower.style.left = Math.random() * 100 + 'vw';
+            flower.style.animationDuration = Math.random() * 3 + 2 + 's';
+            flower.style.opacity = Math.random();
+            flower.style.fontSize = Math.random() * 10 + 10 + 'px';
+            flower.style.top = '-20px';
+
+            document.getElementById('tet-container').appendChild(flower);
+
+            flower.animate([
+                { transform: 'translateY(0) rotate(0deg)' },
+                { transform: `translateY(100vh) rotate(${Math.random() * 360}deg)` }
+            ], {
+                duration: Math.random() * 3000 + 3000,
+                iterations: 1
+            });
+
+            setTimeout(() => flower.remove(), 5000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+</body>
+
+</html>
