@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Project of Thien </title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -163,6 +164,42 @@
         }
         setInterval(createFlower, 300);
     </script>
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert("Xin lỗi, chức năng này bị khóa để bảo vệ bản quyền!");
+        });
+    </script>
+    <script>
+        document.onkeydown = function (e) {
+            // Chặn F12
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Chặn Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0))) {
+                return false;
+            }
+            // Chặn Ctrl+U (Xem nguồn trang)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
+    </script>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+</script>
 </body>
 
 </html>
