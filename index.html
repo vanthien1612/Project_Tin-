@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Project of Thien </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
@@ -58,7 +59,8 @@
         <div class="section">
             <div class="text">
                 <h2>Học siêu - Chơi đỉnh</h2>
-                <p>Các thành tích đạt được:</p>
+                <button class="accordion">Xem các thành tích đạt được 👇</button>
+                <div class="panel">
                 <ul>
                     <li>04 Huy chương vàng môn điền kinh</li>
                     <li>03 Huy chương vàng môn cờ vua</li>
@@ -68,6 +70,7 @@
                     <li>01 Huy chương đồng môn bóng đá nam</li>
                     <li>Giải khuyến khích khiêu vũ</li>
                 </ul>
+                </div>
             </div>
             <div class="image">
                 <img src="The_thao.jpg">
@@ -193,6 +196,20 @@
             }
         };
     </script>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+</script>
 </body>
 
 </html>
