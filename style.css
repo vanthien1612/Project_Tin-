@@ -8,7 +8,7 @@ body {
 
 .banner {
 
-    background: url("test_anh.jpg") no-repeat center center;
+    background: url("anh_banner.jpg") no-repeat center center;
     border-bottom: 5px solid #d4af37;
 
     background-size: cover;
